@@ -1,18 +1,21 @@
-<p>
-  <strong>Title:</strong>
+<h2>
   <%= @article.title %>
-</p>
+</h2>
 
-<p>
-  <strong>Text:</strong>
+<h4>
   <%= @article.text %>
-</p>
+</h4>
 
+<hr>
 
-<h2>Comments</h2>
-<%= render @article.comments %>
+<div id="comments">
+  <% if @article.comments.any? %>
+    <h4>Name</h4>
+    <%= render @article.comments %>
+  <% end %>
+</div>
 
-<h2>Add a comment</h2>
+<h4>Add a comment</h4>
 <%= render 'comments/form' %>
 
 

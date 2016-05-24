@@ -1,12 +1,10 @@
-<p>
-  Comment Maker:
-  <%= comment.commenter %>
-</p>
 
-<p>
-  What they said:
-  <%= comment.body %>
-</p>
+<h4>Comment Maker:</h4>
+<p> <%= comment.commenter %> </p>
+
+
+<h4>Comment:</h4>
+ <p><%= comment.body %></p>
 
 <p>
   <%= link_to "Destroy Comment", [comment.article, comment],
